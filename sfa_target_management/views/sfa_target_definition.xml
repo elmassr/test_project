@@ -1,0 +1,82 @@
+<odoo>
+
+    <record id="view_sfa_target_definition_form" model="ir.ui.view">
+        <field name="name">sfa.target.definition.form</field>
+        <field name="model">sfa.target.definition</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet style="width:800px">
+
+                    <group style="width:120px">
+                        <field name="target_name" style="width:120px"/>
+                        <field name="salesman_id" style="width:120px" options="{'no_edit': True, 'no_create': True}"/>
+                        <field name="target_type" style="width:120px" options="{'no_edit': True, 'no_create': True}"/>
+
+                    </group>
+                    <group>
+                        <field name="date_from" style="width:120px"/>
+                        <field name="date_to" style="width:120px"/>
+                        <field name="branch_id" options="{'no_edit': True, 'no_create': True}" style="width:120px"/>
+
+
+                    </group>
+
+
+                    <notebook>
+                        <page string=" Products">
+
+                            <field name="line_ids">
+                                <tree editable="bottom">
+                                    <field name="product_category_id" readonly="level_of_assignment_line == 'none'"
+                                           options="{'no_edit': True, 'no_create': True}"/>
+                                    <field name="level_of_assignment_line" column_invisible="1"/>
+                                    <field name="customer_base" column_invisible="1"/>
+                                    <field name="product" readonly="level_of_assignment_line != 'product'"/>
+                                    <field name="customer" options="{'no_edit': True, 'no_create': True}"
+                                       readonly="customer_base == True" />
+                                    <field name="target"/>
+
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                </sheet>
+
+
+            </form>
+        </field>
+    </record>
+    <record id="view_sfa_target_definition_tree" model="ir.ui.view">
+        <field name="name">sfa.target.definition.tree</field>
+        <field name="model">sfa.target.definition</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="target_name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="sfa_target_definition_form" model="ir.actions.act_window">
+        <field name="name">Target Definition00000</field>
+        <field name="res_model">sfa.target.definition</field>
+        <field name="target">current</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem
+            id="menu_sfa_target_root" name="Target Management" parent="sale.sale_menu_root"
+
+    />
+
+
+    <menuitem
+            id="menu_sfa_target_definition_root" name="Target Definition" parent="menu_sfa_target_root"
+            action="sfa_target_definition_form"
+
+    />
+
+
+</odoo>

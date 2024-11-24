@@ -1,0 +1,54 @@
+<odoo>
+    <record id="view_sfa_target_type_form" model="ir.ui.view">
+        <field name="name">sfa.target.type.form</field>
+        <field name="model">sfa.target.type</field>
+        <field name="arch" type="xml">
+            <form>
+
+                <group>
+                    <field name="name"/>
+                    <field name="level_of_assignment"/>
+                    <field name="target_point"/>
+
+                </group>
+                <group>
+                    <field name="target_on"/>
+                    <field name="customer_base"/>
+                    <field name="branch_id"/>
+
+                </group>
+
+
+            </form>
+        </field>
+    </record>
+    <record id="view_sfa_target_type_tree" model="ir.ui.view">
+        <field name="name">sfa.target.type.tree</field>
+        <field name="model">sfa.target.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="level_of_assignment"/>
+                <field name="target_point"/>
+                <field name="target_on"/>
+                <field name="customer_base"/>
+                <field name="branch_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sfa_target_type_form" model="ir.actions.act_window">
+        <field name="name">Target Type</field>
+        <field name="res_model">sfa.target.type</field>
+        <field name="target">current</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_sfa_target_type_root" name="Target type" parent="menu_sfa_target_root"
+            action="sfa_target_type_form"
+
+    />
+
+
+</odoo>
