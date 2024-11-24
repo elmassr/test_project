@@ -1,0 +1,23 @@
+<odoo>
+    <record id="project_osama_category" model="ir.module.category">
+        <field name="name">Project Osama</field>
+    </record>
+    <!--    <record id="project_osama_user_group" model="res.groups">-->
+    <!--        <field name="name">Project Osama User</field>-->
+    <!--        <field name="category_id" ref="project.osama_category"/>-->
+    <!--&lt;!&ndash;        <field name="implied_ids" eval="[(4, ref('project_osama_manger_group'))]"/>&ndash;&gt;-->
+    <!--    </record>-->
+
+    <record id="project_osama_manger_group" model="res.groups">
+        <field name="name">Project Osama Manager</field>
+        <field name="category_id" ref="project_osama.project_osama_category"/>
+
+
+    </record>
+
+    <record id="project_osama_user_group" model="res.groups">
+        <field name="name">Project Osama User</field>
+        <field name="category_id" ref="project_osama.project_osama_category"/>
+    </record>
+
+</odoo>

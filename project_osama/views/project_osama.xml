@@ -1,0 +1,195 @@
+<odoo>
+    <record id="view_project_osama_form" model="ir.ui.view">
+        <field name="name">project.osama.form</field>
+        <field name="model">project.osama</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+
+                    <button name="action_draft" type="object" class="btn-primary"
+                            string="Draft" invisible="state =='draft'"/>
+                    <button name="action_confirm" type="object" class="btn-secondary"
+                            string="Confirm" invisible="state !='draft'"/>
+                    <button name="action_in_progress" type="object" class="btn-success"
+                            string="In_Progress" invisible="state !='draft'"/>
+                    <button name="action_done" type="object" class="btn-success"
+                            string="Done" invisible="state !='draft'"/>
+                    <button name="action_cancel" type="object" class="btn-danger"
+                            string="Cancel"/>
+
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="project_id"/>
+                        <field name="task_id"/>
+
+                    </group>
+                    <br></br>
+                    <br></br>
+
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+                    <group>
+                        <field name="time_spent"/>
+                    </group>
+
+                    <group>
+
+                        <field name="duration_date"/>
+                        <field name="create_time"/>
+
+                    </group>
+                    <br></br>
+                    <notebook>
+                        <page string="order line">
+
+                            <field name="line_ids">
+                                <tree editable="bottom">
+                                    <field name="product"/>
+                                    <field name="description"/>
+                                    <field name="quantity"/>
+                                    <field name="delivered"/>
+                                    <field name="invoiced"/>
+                                    <field name="unit_price"/>
+                                    <field name="taxes"/>
+                                    <field name="tax_excl"/>
+                                    <field name="discount"/>
+                                    <field name="price_subtotal"/>
+                                    <field name="total_amount"/>
+
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="view_project_osama_tree" model="ir.ui.view">
+        <field name="name">project.osama.tree</field>
+        <field name="model">project.osama</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_project_osama_kanban" model="ir.ui.view">
+        <field name="name">project.osama.kanban</field>
+        <field name="model">project.osama</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div>
+                                <strong>
+                                    <field name="state" readonly="1" widget="statusbar"/>
+                                </strong>
+                            </div>
+                            <div>
+                                <strong>
+                                    <field name="name"/>
+                                    <field name="task_id"/>
+                                    <field name="date_from"/>
+                                    <field name="start_time"/>
+                                </strong>
+                            </div>
+                            <div>
+                                <span><field name="project_id"/>&amp;nbsp;
+                                </span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_project_osama_graph" model="ir.ui.view">
+        <field name="name">project.osama.graph</field>
+        <field name="model">project.osama</field>
+        <field name="arch" type="xml">
+            <graph>
+                <field name="name"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_project_osama_pivot" model="ir.ui.view">
+        <field name="name">project.osama.pivot</field>
+        <field name="model">project.osama</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="name"/>
+            </pivot>
+        </field>
+    </record>
+    <record id="view_project_osama_gantt" model="ir.ui.view">
+        <field name="name">project.osama.gantt</field>
+        <field name="model">project.osama</field>
+        <field name="arch" type="xml">
+            <gantt date_start="date_start" date_stop="date_stop">
+                <templates>
+                    <t t-name="gantt-box">
+                        <div class="oe_gantt_global_click">
+                            <t t-esc="record.name"/>
+                        </div>
+                    </t>
+                </templates>
+            </gantt>
+        </field>
+    </record>
+
+
+    <record id="view_project_osama_calendar" model="ir.ui.view">
+        <field name="name">project.osama.calendar</field>
+        <field name="model">project.osama</field>
+        <field name="arch" type="xml">
+            <calendar string="ProjectOsama" date_start="date_from" mode="month">
+                <field name="project_id"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+
+            </calendar>
+        </field>
+    </record>
+
+
+    <record id="open_task_type_form" model="ir.actions.act_window">
+        <field name="name">Project Osama</field>
+        <field name="res_model">project.osama</field>
+        <field name="target">current</field>
+        <field name="view_mode">tree,form,kanban,calendar,graph,pivot,gantt</field>
+    </record>
+    <!--    <menuitem-->
+    <!--            name="Project Osama"-->
+    <!--            action="action_project_osama"-->
+    <!--            parent="project.menu_project"-->
+    <!--            sequence="3"-->
+    <!--    />-->
+    <menuitem
+            name="Project Osama"
+            id="menu_project_config_project"
+            action="open_task_type_form"
+            groups="base.group_no_one"
+            sequence="16"
+    />
+
+</odoo>
