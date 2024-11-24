@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_scrap_project,access_scrap_project,model_scrap_project,,1,1,1,1
+access_sales_scrap,access_sales_scrap,model_sales_scrap,,1,1,1,1
+access_scrap_request,access_scrap_request,model_scrap_request,,1,1,1,1
+access_committees_view,access_committees_view,model_committees_view,,1,1,1,1

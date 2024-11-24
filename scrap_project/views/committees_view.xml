@@ -1,0 +1,74 @@
+<odoo>
+    <record id="view_committees_view_form" model="ir.ui.view">
+        <field name="name">committees.view.form</field>
+        <field name="model">committees.view</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="description"/>
+                </group>
+<!--                <notebook>-->
+<!--                    <page string="order line">-->
+
+<!--                        <field name="members">-->
+<!--                            <tree editable="bottom">-->
+<!--                                <field name="user"/>-->
+<!--                                <field name="role"/>-->
+
+<!--                            </tree>-->
+<!--                        </field>-->
+<!--                    </page>-->
+
+<!--                </notebook>-->
+
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id="view_committees_view_tree" model="ir.ui.view">
+        <field name="name">committees.view.tree</field>
+        <field name="model">committees.view</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="open_configration_form" model="ir.actions.act_window">
+        <field name="name">Configration</field>
+        <field name="res_model">scrap.project</field>
+        <field name="target">current</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+            name="Configration"
+            id="menu_configration"
+            action="open_configration_form"
+            parent="menu_project_config_project"
+    />
+
+    <menuitem
+            name="Scrap Reason"
+            id="scrap_reason_menu"
+            action="open_configration_form"
+            parent="menu_configration"
+    />
+    <menuitem
+            name="Committees"
+            id="committees_menu"
+            action="open_configration_form"
+            parent="menu_configration"
+    />
+    <menuitem
+            name="Committees Management"
+            id="committees_management_menu"
+            action="open_configration_form"
+            parent="menu_configration"
+    />
+
+
+</odoo>
