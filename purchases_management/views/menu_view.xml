@@ -1,0 +1,47 @@
+<odoo>
+    <record id="open_configration_form" model="ir.actions.act_window">
+        <field name="name">Configration</field>
+        <field name="res_model">purchases.management</field>
+        <field name="target">current</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+            name="Configration"
+            id="menu_configration_view"
+            action="open_configration_form"
+            parent="menu_project_config_project"
+    />
+    <record id="open_vendors_form" model="ir.actions.act_window">
+        <field name="name">Vendors</field>
+        <field name="res_model">purchases.management</field>
+        <field name="target">current</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            name="Vendors"
+            id="menu_configration_form"
+            action="open_vendors_form"
+            parent="menu_project_config_project"
+    />
+
+    <record id="open_purchases_management_form" model="ir.actions.act_window">
+        <field name="name">Purchases Management</field>
+        <field name="res_model">purchases.management</field>
+        <field name="target">current</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+            name="Purchases Management"
+            id="menu_configration"
+            action="open_purchases_management_form"
+            parent="menu_project_config_project"
+    />
+    <menuitem
+            name="supplier"
+            id="supplier_menu"
+            action="open_configration_form"
+            parent="menu_configration"
+    />
+
+</odoo>

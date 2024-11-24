@@ -1,0 +1,86 @@
+<odoo>
+    <record id="view_purchases_management_form" model="ir.ui.view">
+        <field name="name">purchases.management.form</field>
+        <field name="model">purchases.management</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <group>
+                        <field name="purchases"/>
+
+                    </group>
+
+                </header>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="country"/>
+                        <field name="company"/>
+                        <field name="area"/>
+                        <field name="street"/>
+                        <field name="building"/>
+                        <field name="city"/>
+                        <field name="country_state"/>
+                    </group>
+                    <group>
+                        <field name="Job_position"/>
+                        <field name="phone_number"/>
+                        <field name="Mobile_phone"/>
+                        <field name="e_mail"/>
+                        <field name="website"/>
+                        <field name="address"/>
+                        <field name="language"/>
+                        <field name="Hashtags"/>
+
+                    </group>
+                    <br></br>
+                    <br></br>
+                    <group>
+                        <field name="Added_value"/>
+                        <field name="is_vendor"/>
+                        <field name="supplier_classification"/>
+                        <field name="Identity_type"/>
+                        <field name="Identity_number"/>
+                        <field name="Identity_card"/>
+                    </group>
+                    <group>
+                        <field name="level_of_assignment"/>
+                    </group>
+
+                </group>
+
+
+            </form>
+        </field>
+    </record>
+
+    <record id="view_purchases_management_tree" model="ir.ui.view">
+        <field name="name">purchases.management.tree</field>
+        <field name="model">purchases.management</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="open_purchases_management_form" model="ir.actions.act_window">
+        <field name="name">purchases.management</field>
+        <field name="res_model">purchases.management</field>
+        <field name="target">current</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+            name="Purchases Management"
+            id="menu_project_config_project"
+            action="open_purchases_management_form"
+            groups="base.group_no_one"
+            sequence="16"
+    />
+
+
+
+
+
+</odoo>

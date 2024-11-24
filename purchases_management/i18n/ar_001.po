@@ -1,0 +1,213 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchases_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240619\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 22:03+0000\n"
+"PO-Revision-Date: 2024-11-12 22:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__Mobile_phone
+msgid "  Mobile_phone"
+msgstr "رقم الموبايل"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__Hashtags
+msgid " Hashtags"
+msgstr "علامات التصنيف"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__Identity_card
+msgid " Identity_card"
+msgstr "رقم الهويه"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__Identity_type
+msgid " Identity_type"
+msgstr "نوع الهويه"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__Postal_code
+msgid " Postal_code"
+msgstr "الرقم البريدي"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__building
+msgid " building"
+msgstr "رقم المبني"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__company
+msgid " company"
+msgstr "اسم الشركه"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__country_state
+msgid " country_state"
+msgstr "العوان الوطني"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__e_mail
+msgid " e_mail"
+msgstr "البريد الالكتروني"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__phone_number
+msgid " phone_number"
+msgstr "الهاتف المحمول"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__Added_value
+msgid "Added_value"
+msgstr "القيمه المضافه"
+
+#. module: purchases_management
+#: model:ir.actions.act_window,name:purchases_management.open_configration_form
+#: model:ir.ui.menu,name:purchases_management.menu_configration_view
+msgid "Configration"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model,name:purchases_management.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__id
+msgid "ID"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__Identity_number
+msgid "Identity_number "
+msgstr "رقم الهويه"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__is_vendor
+msgid "Is Vendor"
+msgstr "المورد"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__Job_position
+msgid "Job_position"
+msgstr "المسمي الوظيفي"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.actions.act_window,name:purchases_management.open_purchases_management_form
+#: model:ir.ui.menu,name:purchases_management.menu_configration
+#: model:ir.ui.menu,name:purchases_management.menu_project_config_project
+msgid "Purchases Management"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__supplier_classification
+msgid "Supplier Classification"
+msgstr "تصنيف الموردين"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_res_partner__vendor
+#: model:ir.model.fields,field_description:purchases_management.field_res_users__vendor
+msgid "Vendor"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.actions.act_window,name:purchases_management.open_vendors_form
+#: model:ir.ui.menu,name:purchases_management.menu_configration_form
+msgid "Vendors"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__address
+msgid "address"
+msgstr "العنوان"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__area
+msgid "area"
+msgstr "المنطقه"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__city
+msgid "city"
+msgstr "المدينه"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__country
+msgid "country"
+msgstr "الدوله"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__language
+msgid "language"
+msgstr "اللغه"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__name
+msgid "name:"
+msgstr "مثال"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__neighborhood
+msgid "neighborhood"
+msgstr "الحي"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__purchases
+msgid "purchases"
+msgstr "المشتريات"
+
+#. module: purchases_management
+#: model:ir.model,name:purchases_management.model_purchases_management
+msgid "purchases.management"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__street
+msgid "street"
+msgstr "الشارع"
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_res_partner__supplier
+#: model:ir.model.fields,field_description:purchases_management.field_res_users__supplier
+#: model:ir.ui.menu,name:purchases_management.supplier_menu
+msgid "supplier"
+msgstr ""
+
+#. module: purchases_management
+#: model:ir.model.fields,field_description:purchases_management.field_purchases_management__website
+msgid "website"
+msgstr "الموقع الالكتروني "
